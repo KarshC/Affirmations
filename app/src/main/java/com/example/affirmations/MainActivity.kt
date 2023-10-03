@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val textView = findViewById<TextView>(R.id.textview)
-        textView.text = DataSource().loadAffirmations().size.toString()
+        val textStr = DataSource().loadAffirmations().size.toString() + " Affirmations"
+        textView.text = textStr
     }
 }
